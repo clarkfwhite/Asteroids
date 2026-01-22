@@ -14,16 +14,18 @@ def main():
 
     while True:
         log_state()
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+            
         screen.fill("black")
 
         player.draw(screen)
 
         pygame.display.flip()
-        clock.tick(60)
-        dt = clock.tick()/1000
+
+        dt = clock.tick(60)/1000
         #print(f"{dt}")
     
     #print(f"Starting Asteroids with pygame version: {pygame.version.ver}")
